@@ -1,0 +1,18 @@
+PRUEBAS OBLIGATORIAS (resultado de la pagina vs. modelo.pkl)
+- Semana con 20 consultas, S/ 200 y sin campana
+    entrada          : {'consultas_web': '20', 'inversion_publicidad_soles': '200', 'campana_escolar': '0'}
+    la pagina muestra: 10 kits
+    modelo.pkl       : 9.8044
+- Semana con 55 consultas, S/ 800 y con campana
+    entrada          : {'consultas_web': '55', 'inversion_publicidad_soles': '800', 'campana_escolar': '1'}
+    la pagina muestra: 31 kits
+    modelo.pkl       : 30.9627
+
+PRUEBAS DE VALIDACION (deben mostrar un mensaje de error y ningun resultado)
+- Consultas = 4 (menor que 5): OK
+- Consultas = 71 (mayor que 70): OK
+- Publicidad = S/ 1200 (mayor que 1100): OK
+- Publicidad = -50 (negativa): OK
+- Campana = 2 (solo se permite 0 o 1): OK
+- Texto en lugar de numero: OK
+- Campo vacio: OK

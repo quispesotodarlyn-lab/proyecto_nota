@@ -1,0 +1,24 @@
+{
+  "caso": "Caso 1 - Estimacion de pedidos de kits de robotica",
+  "objetivo": "pedidos_kits",
+  "unidad_objetivo": "kits por semana",
+  "columnas": [
+    "consultas_web",
+    "inversion_publicidad_soles",
+    "campana_escolar"
+  ],
+  "intercepto": 1.5384729585592574,
+  "coeficientes": {
+    "consultas_web": 0.3463033562740661,
+    "inversion_publicidad_soles": 0.006699109182241925,
+    "campana_escolar": 5.018213367145449
+  },
+  "metricas": {
+    "mae": 2.954102420565232,
+    "r2": 0.7910735136647091,
+    "filas_entrenamiento": 88,
+    "filas_prueba": 22,
+    "filas_total": 110,
+    "random_state": 42
+  }
+}

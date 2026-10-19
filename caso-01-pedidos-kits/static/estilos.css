@@ -1,0 +1,151 @@
+/* Estilos de la aplicacion | SENATI - Taller de Machine Learning */
+:root {
+  --azul: #0b397b;
+  --azul-2: #113da2;
+  --azul-claro: #eaf1ff;
+  --texto: #1f2d3d;
+  --gris: #5a6b7d;
+  --borde: #d5deea;
+  --fondo: #f3f6fb;
+  --rojo: #b3261e;
+  --rojo-claro: #fdecea;
+  --ambar: #fff7e0;
+  --ambar-borde: #e0a800;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+/* ---------- Cabecera ---------- */
+.cabecera {
+  background: #fff;
+  border-bottom: 4px solid var(--azul-2);
+  padding: 14px max(20px, calc((100vw - 860px) / 2));
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.cabecera img { width: 160px; max-width: 38%; height: auto; }
+.cabecera strong { font-size: 15px; color: var(--azul); }
+.cabecera p { margin: 2px 0 0; font-size: 13px; color: var(--gris); }
+
+/* ---------- Tarjeta principal ---------- */
+.tarjeta {
+  max-width: 860px;
+  margin: 36px auto 18px;
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 36px 40px 32px;
+  box-shadow: 0 8px 28px rgba(11, 57, 123, 0.08);
+}
+.etiqueta {
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 4px 12px;
+  background: var(--azul-claro);
+  color: var(--azul-2);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+h1 { margin: 0 0 10px; font-size: 28px; line-height: 1.2; color: var(--azul); }
+.intro { margin: 0 0 8px; color: #3d4c5f; }
+
+/* ---------- Formulario ---------- */
+.campos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px 22px;
+  margin-top: 24px;
+}
+.campo { display: flex; flex-direction: column; gap: 6px; }
+label { font-weight: 700; font-size: 15px; }
+
+.entrada { display: flex; align-items: stretch; }
+input, select {
+  font: inherit;
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #b9c5d6;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--texto);
+}
+.entrada input { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+.unidad {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  background: #eef2f8;
+  border: 1px solid #b9c5d6;
+  border-left: 0;
+  border-radius: 0 8px 8px 0;
+  color: var(--gris);
+  font-size: 13px;
+  white-space: nowrap;
+}
+input:focus, select:focus, button:focus-visible {
+  outline: 3px solid rgba(17, 61, 162, 0.28);
+  border-color: var(--azul-2);
+}
+.ayuda { color: var(--gris); font-size: 12.5px; }
+.con-error input, .con-error select { border-color: var(--rojo); background: var(--rojo-claro); }
+.error { color: var(--rojo); font-weight: 700; font-size: 13px; }
+
+button {
+  margin-top: 26px;
+  font: inherit;
+  font-weight: 700;
+  background: var(--azul-2);
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 13px 34px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+button:hover { background: #0d2c78; }
+
+/* ---------- Resultado ---------- */
+.resultado {
+  margin-top: 28px;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #eaf1ff 0%, #f6f9ff 100%);
+  border: 1px solid #c6d7f5;
+  border-left: 6px solid var(--azul-2);
+  border-radius: 10px;
+}
+.resultado-titulo { margin: 0; font-size: 14px; color: var(--gris); text-transform: uppercase; letter-spacing: 0.04em; font-weight: 700; }
+.resultado-valor { margin: 4px 0 6px; font-size: 42px; line-height: 1.1; font-weight: 800; color: var(--azul); }
+.resultado-detalle { margin: 0; font-size: 14px; color: #3d4c5f; }
+
+/* ---------- Aviso ---------- */
+.aviso {
+  margin-top: 26px;
+  padding: 13px 16px;
+  background: var(--ambar);
+  border-left: 5px solid var(--ambar-borde);
+  border-radius: 6px;
+  font-size: 13.5px;
+  color: #5b4a00;
+}
+
+footer { text-align: center; color: var(--gris); font-size: 12.5px; padding: 12px 20px 30px; }
+
+/* ---------- Pantallas pequenas ---------- */
+@media (max-width: 720px) {
+  .tarjeta { margin: 16px 12px; padding: 24px 20px; }
+  h1 { font-size: 23px; }
+  .resultado-valor { font-size: 34px; }
+  .cabecera { padding: 12px 16px; gap: 14px; }
+}
